@@ -19,7 +19,7 @@ const menuList = [
         icon: <Activity />,
       },
       {
-        link: "/text-generator",
+        link: "/pages/textgenerate",
         text: "Text Generator",
         icon: <PencilLine />,
       },
