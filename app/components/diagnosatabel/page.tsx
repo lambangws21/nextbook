@@ -52,20 +52,20 @@ const NursingCareTable: React.FC<TableProps> = ({ data }) => {
                   ))}
                 </ul>
                 <button
-                  className="mt-2 text-blue-500"
+                  className="mt-2 text-slate-900 rounded-3xl hover:bg-slate-400 p-2 w-auto h-auto bg-blue-600"
                   onClick={() => handleCopy(row.luaranKeperawatan)}
                 >
                   Copy Luaran
                 </button>
               </td>
-              <td className="p-2 md:border md:border-gray-300 block md:table-cell">
+              <td className="p-2 md:border md:border-gray-300 block md:table-cell ">
                 <ul className="list-disc ml-5">
                   {row.intervensiKeperawatan.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
                 <button
-                  className="mt-2 text-blue-500"
+                  className="mt-2 text-slate-900 rounded-3xl hover:bg-slate-400 p-2 w-auto h-auto bg-blue-600"
                   onClick={() => handleCopy(row.intervensiKeperawatan)}
                 >
                   Copy Intervensi

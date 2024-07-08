@@ -2,6 +2,7 @@
 "use client";
 import React, { useState } from 'react';
 import CustomModal from '../../components/modal';
+import { SendHorizontal } from 'lucide-react';
 
 const TextGenerate: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,12 +31,12 @@ const TextGenerate: React.FC = () => {
   };
 
   return (
-    <div className="h-screen flex flex-row-reverse items-center justify-center ml-10">
-      <div className="bg-blue-950 border-2 border-yellow-300 p-5 rounded-lg shadow-md w-96 h-90">
-        <h2 className="text-2xl font-semibold mb-4 text-blue-50 text-center underline">
+    <div className="flex items-center justify-center ">
+      <div className="bg-blue-500 border-2 p-5 rounded-lg shadow-md flex flex-wrap justify-center items-center">
+        <h2 className="text-3xl font-semibold mb-4 text-blue-50 text-center underline">
           Diagnosis Generate
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-2 flex flex-wrap justify-center items-center">
+        <form onSubmit={handleSubmit} className="flex p-2 gap-4 flex-wrap justify-center items-center">
           {/* Form fields */}
           {Object.keys(formData).map((key) => (
             <div className="mb-4" key={key}>
@@ -54,9 +55,10 @@ const TextGenerate: React.FC = () => {
           ))}
           <button
             type="submit"
-            className="bg-blue-950 text-white rounded-md p-2 w-32 hover:bg-yellow-300 hover:text-slate-700 mt-5 border-2 border-yellow-200"
+            className="bg-slate-500 text-white rounded-md flex items-center justify-center gap-3 p-2 w-72 mt-4 hover:bg-slate-300 hover:text-black "
           >
             Submit
+            <SendHorizontal  className='hover:rotate-180 h-6 w-8 transition duration-1000'/>
           </button>
         </form>
       </div>
@@ -68,21 +70,23 @@ const TextGenerate: React.FC = () => {
         <h2 className="text-4xl font-semibold mb-4 flex justify-center">Data Generated!</h2>
         <textarea
           readOnly
-          className="w-[340px] h-40 justify-center border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-900"
+          className="w-[440px] h-44 justify-center border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-900"
           value={completedSentence}
         />
+        <div className='flex justify-center items-center mx-auto w-full gap-4 mt-4'>
         <button
-          className="bg-blue-500 text-white rounded-md p-2 w-40 mt-4 hover:bg-yellow-600"
+          className="bg-blue-500 text-white rounded-md p-2 w-40 hover:bg-yellow-600"
           onClick={copyToClipboard}
         >
           Salin Teks
         </button>
         <button
-          className="bg-gray-300 text-gray-700 rounded-md p-2 w-40 mt-2 ml-4 hover:bg-gray-400"
+          className="bg-slate-100 text-gray-700 rounded-md p-2 w-40  hover:bg-gray-400"
           onClick={() => setModalIsOpen(false)}
         >
           Tutup
         </button>
+        </div>
       </CustomModal>
     </div>
   );
