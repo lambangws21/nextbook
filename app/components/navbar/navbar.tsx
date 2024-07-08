@@ -14,7 +14,7 @@ const menuList = [
         icon: <ShieldPlus />,
       },
       {
-        link: "/diagnosa",
+        link: "/diagnosaview",
         text: "Diagnosa",
         icon: <Activity />,
       },

@@ -1,6 +1,6 @@
 "use client";   
 import React from 'react';
-import OperationCard from '@/components/cardoperastion';
+import OperationCard from '@/app/components/cardoperastion';
 import { Dokter } from '@/app/libs/operationcard';
 
 const operations: Dokter[] = [

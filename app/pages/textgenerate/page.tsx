@@ -1,7 +1,7 @@
 // pages/text-generate.tsx
 "use client";
 import React, { useState } from 'react';
-import CustomModal from '../../../components/modal';
+import CustomModal from '../../components/modal';
 
 const TextGenerate: React.FC = () => {
   const [formData, setFormData] = useState({
