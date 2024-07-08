@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Activity, BookCheck, PencilLine, ShieldPlus } from "lucide-react";
-import UserItems from "../useritems";
+import UserItems from "../useritems/useritems";
 
 const menuList = [
   {
