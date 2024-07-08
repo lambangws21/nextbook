@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import data from './data.json';
-import Card from "../../../components/card";
+import Card from "../../../app/components/card";
 
 const KraniotomiDekompresi = () => {
     const [laporanOperasi, setLaporanOperasi] = useState({});
